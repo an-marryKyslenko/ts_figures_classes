@@ -16,10 +16,10 @@ export class Triangle implements Figure {
     public b: number,
     public c: number,
   ) {
-    const sides: number[] = [a, b, c].sort((first, second) => second - first);
+    const sides: number[] = [this.a, this.b, this.c].sort((first, second) => second - first);
 
     if (sides[0] >= sides[1] + sides[2]) {
-      throw new Error('This is not right triangle');
+      throw new Error('The sides do not form a valid triangle');
     }
 
     if (this.a <= 0 || this.b <= 0 || this.c <= 0) {
