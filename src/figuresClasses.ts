@@ -23,7 +23,7 @@ export class Triangle implements Figure {
     }
 
     if (this.a <= 0 || this.b <= 0 || this.c <= 0) {
-      throw new Error('Put number bigger than 0');
+      throw new Error('Side lengths must be greater than 0');
     }
   }
 
@@ -54,6 +54,7 @@ export class Circle implements Figure {
   }
 }
 
+
 export class Rectangle implements Figure {
   public shape: Shape = 'rectangle';
 
@@ -63,7 +64,7 @@ export class Rectangle implements Figure {
     public height: number,
   ) {
     if (this.width <= 0 || this.height <= 0) {
-      throw new Error('Put number bigger than 0');
+      throw new Error('Width and height must be greater than 0');
     }
   }
 
